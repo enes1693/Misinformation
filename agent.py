@@ -11,6 +11,7 @@ class UserAgent(Agent):
         self.correction_count = 0  # Track corrections made by fact checkers
         
         
+        
         if agent_type == "fact_checker":
             self.critical_thinking = 1.0
             self.believes_misinformation = False
