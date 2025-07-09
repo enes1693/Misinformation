@@ -25,6 +25,7 @@ class UserAgent(Agent):
             self.last_position = None  # Track last position for movement
         elif agent_type == "influencer":
 
+
             self.influence_radius = 3  
             self.influence_strength = 0.9  
             self.influence_count = 0
