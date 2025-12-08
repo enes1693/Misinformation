@@ -187,7 +187,6 @@ class UserAgent(Agent):
             self.pos, moore=True, include_center=False, radius=self.cluster_radius
         )
         
-       
         similar_neighbors = [n for n in neighbors if n.believes_misinformation == self.believes_misinformation]
         
         if similar_neighbors:
