@@ -54,7 +54,6 @@ def agent_portrayal(agent):
         portrayal["Shape"] = "circle"
         portrayal["Color"] = "red" if agent.believes_misinformation else "green"
         portrayal["text"] = "M" if agent.believes_misinformation else "I"
-
     return portrayal
 
 # Create grid visualization with larger size
