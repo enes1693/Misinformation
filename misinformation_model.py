@@ -164,6 +164,7 @@ class MisinformationModel(Model):
 
     def create_echo_chamber_agents(self):
         """Create agents for echo chamber scenario"""
+        
         # Create 4 distinct clusters
         cluster_size = self.num_agents // 4
         
@@ -190,7 +191,6 @@ class MisinformationModel(Model):
                 agent_id = cluster * cluster_size + i
                 if agent_id >= self.num_agents:
                     break
-                    
                 critical_thinking = self.random.random() * 0.3  # Lower critical thinking
                 agent = UserAgent(agent_id, self, "echo_chamber", critical_thinking, misinformation)
                 
@@ -205,7 +205,6 @@ class MisinformationModel(Model):
                 # Initialize cluster center after placement
                 agent.cluster_center = (center_x, center_y)
 
-   
     def step(self):
         """Execute one step of the simulation"""
         self.step_count += 1
